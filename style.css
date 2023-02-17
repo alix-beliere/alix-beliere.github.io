@@ -1,13 +1,16 @@
 
 
 body {
-    background-color: azure;
+    background-color: black;
     color : rgb(255, 255, 255);
-    font-family: 'Avenir';
+    font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     min-height: 99vh;
     font-size: 16px;
 }
+/* /* .amour{
+   /* background: pink; */
+   /* cursor: url(images-projets/titres/flecherose.png) 10 10 ,auto; */
 
 img{
    max-width: 100%;
@@ -15,8 +18,14 @@ img{
    height: auto;
 }
 
-.home {
-    background-color: rgb(0, 0, 0);
+.header-projets a.current{
+   color:rgb(255, 94, 159);
+   
+}
+
+.header a.current{
+   color:rgb(255, 94, 159);
+   
 }
 
 
@@ -35,18 +44,57 @@ img{
 .header a{
     text-decoration: none;
     color: currentColor;
+   
+}
+
+
+.courant {
+   color: blue;
+}
+
+.header-projets {
+   display: grid;
+   grid-template-columns: 1fr auto auto auto;
+   gap: 24px;
+   align-items:last baseline;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-bottom: 20px;
+
+}
+
+.header-projets a {
+   text-decoration: none;
+   color: currentColor;
+   margin-bottom: 50px;
+}
+.footer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 24px;
+    align-items:last baseline;
+    justify-content:end;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.footer a{
+   text-decoration: none;
+   color: currentColor;
 }
 
  .projets {
     display: grid;
     grid-template-columns: repeat(auto-fill, 200px);
+    grid-auto-flow: row dense;
     gap: 20px;
-    justify-content: center;
     max-width:1000px;
     margin:auto;
     justify-content:center;
     gap:24px;
     margin-top: 50px;
+    
     }
 
  .projet {
@@ -61,6 +109,14 @@ img{
     grid-row: span 2;
  }
  
+ .projet-treslarge {
+   grid-column: 3;
+   grid-row: span 3;
+}
+.projet-trestreslarge {
+   grid-column:  1/-1;
+   grid-row: span 4;
+}
 
  .a-fx{
    display: grid;
@@ -82,17 +138,92 @@ img{
    transform:scale(1.1);   
  }
 
-
- .article {
-    margin: auto;
-    display: grid;
+ .a-fxx{
+   display: grid;
  }
 
- .article img {
-    max-width: 100%;
-    display: block;
-    margin-bottom: 24px;
+ .a-fxx img,
+ .a-fxx p {
+   grid-column: 1/-1;
+   grid-row: 1/-1;
+   transition: 0s;
+   
  }
- 
- 
- 
+ .a-fxx p {
+   opacity: 0;
+ }
+
+ .a-fxx:hover .img-preview {
+   opacity:0;
+ }
+
+ .grilleglobale {
+   display: grid;
+   grid-template-columns: 200px  1fr;
+   
+ }
+
+ .icones {
+   margin-left: 20px;
+   margin-right: 50px;
+   margin-top: 0px;
+  
+   
+   
+ }
+
+.sticky {
+   position:sticky;
+   top: 2px;
+ }
+
+
+ .icone {
+   margin-bottom: 10px;
+ }
+
+
+ .page-projets {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, 200px);
+   grid-auto-flow: row dense;
+   row-gap: 100px;
+   gap:24px;
+   justify-content: center ;
+   }
+
+   .page-projets p {
+   color: rgb(255, 255, 255);
+   font-size: 14px;
+   margin:0;
+   grid-column: span 2;   
+   }
+
+
+   .current{
+      color:rgb(231, 0, 169);
+   }
+
+  
+   h2 {
+      font-size: 14px;
+      grid-column: span 2;
+      grid-row: span 1;
+      line-height: 1.5;
+      font-weight: 200;
+      margin-top: 0;
+   
+   }
+
+   .ital {
+      font-size: 14px;
+      grid-column: span 2;
+      grid-row: span 1;
+      line-height: 1.5;
+      font-style:italic;
+
+   }
+  
+   strong {
+      font-style:normal;
+   }
