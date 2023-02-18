@@ -247,8 +247,8 @@ img{
 
    .sources {
       font-size: 14px;
-      grid-column: span 2;
-      grid-row: span 2;
+      grid-column: span 3;
+      grid-row: span 3;
       line-height: 1.5;
       font-weight: 200;
       font-style: oblique;
